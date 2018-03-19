@@ -1,4 +1,4 @@
-const api = process.env.REACT_APP_CONTACTS_API_URL || 'http://localhost:3001'
+const api = process.env.REACT_APP_CONTACTS_API_URL || 'http://localhost:3004'
 
 const headers = {
     'Accept': 'application/json'
@@ -11,6 +11,7 @@ export const doAdd = (numbers) =>
             ...headers,
             'Content-Type': 'application/json'
         },
+
         body: JSON.stringify(numbers)
     })
     .then((res) => res.json())
